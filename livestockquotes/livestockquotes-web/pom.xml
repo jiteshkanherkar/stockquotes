@@ -7,7 +7,6 @@
     <artifactId>livestockquotes</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <groupId>org.jitesh.stockquotes</groupId>
   <artifactId>livestockquotes-web</artifactId>
   <packaging>war</packaging>
   <name>livestockquotes-web Maven Webapp</name>
