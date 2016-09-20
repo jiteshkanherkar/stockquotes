@@ -1,6 +1,6 @@
 package org.jitesh.stockquotes.controller;
 
-import org.jitesh.stockquotes.googleservice.services.GoogleStockService;
+import org.jitesh.stockquotes.googleservice.services.api.GoogleStockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -18,7 +18,6 @@ public class ApiController {
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public @ResponseBody String testApi() {
-        googleStockService.test();
         return "Success";
     }
 }
