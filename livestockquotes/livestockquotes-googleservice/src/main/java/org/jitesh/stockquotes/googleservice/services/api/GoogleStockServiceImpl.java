@@ -1,5 +1,6 @@
 package org.jitesh.stockquotes.googleservice.services.api;
 
+import org.jitesh.stockquotes.googleservice.beans.GoogleScriptInfo;
 import org.jitesh.stockquotes.googleservice.beans.GoogleScriptList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,6 +29,17 @@ public class GoogleStockServiceImpl implements GoogleStockService {
 
 
     public static void main(String[] args) {
-        new ScriptServiceImpl().getScriptList("sbi");
+        new ScriptServiceImpl().getScriptDetails("532215", "BOM");
+    }
+
+    @Override
+    public GoogleScriptInfo getScriptDetails(String scriptCode, String marketType) {
+        GoogleScriptInfo googleScriptInfo = null;
+        try {
+            googleScriptInfo = scriptService.getScriptDetails(scriptCode, marketType);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return googleScriptInfo;
     }
 }
