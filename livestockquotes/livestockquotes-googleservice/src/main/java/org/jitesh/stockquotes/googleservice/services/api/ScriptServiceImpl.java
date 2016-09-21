@@ -36,7 +36,7 @@ public class ScriptServiceImpl implements ScriptService {
             System.out.println("request >> " + request);
             // API call
             RestClient restClient = new RestClient(url);
-            String response = restClient.processRequest(null, "match?" + request, "GET");
+            String response = restClient.processRequest(null, "/match?" + request, "GET");
             System.out.println("response >> " + response);
 
             // parse response
@@ -66,7 +66,7 @@ public class ScriptServiceImpl implements ScriptService {
             String request = builder.toString();
             System.out.println(request);
             RestClient restClient = new RestClient(url);
-            String response = restClient.processRequest(null, "info?" + request, "GET");
+            String response = restClient.processRequest(null, "/info?" + request, "GET");
             System.out.println("response >> " + response);
             response = response.replaceAll("//", "").replaceAll("\\[", "").replaceAll("\\]", "");
             System.out.println("response  " + response);
