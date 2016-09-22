@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class ScriptBean implements Serializable {
 
     private String scriptCode;
-    private String scriptIndex;
+    private String customerId;
     private String scriptName;
     private String marketType;
 
@@ -17,12 +17,12 @@ public class ScriptBean implements Serializable {
         this.scriptCode = scriptCode;
     }
 
-    public String getScriptIndex() {
-        return scriptIndex;
+    public String getCustomerId() {
+        return customerId;
     }
 
-    public void setScriptIndex(String scriptIndex) {
-        this.scriptIndex = scriptIndex;
+    public void setCustomerId(String scriptIndex) {
+        this.customerId = scriptIndex;
     }
 
     public String getScriptName() {
@@ -43,7 +43,7 @@ public class ScriptBean implements Serializable {
 
     @Override
     public String toString() {
-        return "ScriptBean [scriptCode=" + scriptCode + ", scriptIndex=" + scriptIndex + ", scriptName=" + scriptName
+        return "ScriptBean [scriptCode=" + scriptCode + ", scriptIndex=" + customerId + ", scriptName=" + scriptName
                 + ", marketType=" + marketType + "]";
     }
 

@@ -7,7 +7,7 @@ public class GoogleScriptBean {
     @JsonProperty("t")
     private String scriptCode;
     @JsonProperty("id")
-    private String scriptIndex;
+    private String customerId;
     @JsonProperty("n")
     private String scriptName;
     @JsonProperty("e")
@@ -21,12 +21,12 @@ public class GoogleScriptBean {
         this.scriptCode = scriptCode;
     }
 
-    public String getScriptIndex() {
-        return scriptIndex;
+    public String getCustomerId() {
+        return customerId;
     }
 
-    public void setScriptIndex(String scriptIndex) {
-        this.scriptIndex = scriptIndex;
+    public void setCustomerId(String scriptIndex) {
+        this.customerId = scriptIndex;
     }
 
     public String getScriptName() {
@@ -47,7 +47,7 @@ public class GoogleScriptBean {
 
     @Override
     public String toString() {
-        return "GoogleScriptBean [scriptCode=" + scriptCode + ", scriptIndex=" + scriptIndex + ", scriptName="
+        return "GoogleScriptBean [scriptCode=" + scriptCode + ", scriptIndex=" + customerId + ", scriptName="
                 + scriptName + ", marketType=" + marketType + "]";
     }
 

@@ -2,7 +2,7 @@ package org.jitesh.stockquotes.livestockquotes.model;
 
 import java.io.Serializable;
 
-public class ScriptDetailBean implements Serializable {
+public class ScriptOverviewBean implements Serializable {
 
     private String name;
     // scriptCode
@@ -16,6 +16,8 @@ public class ScriptDetailBean implements Serializable {
     private String quoteTime;
     private String dataSource;
     private String priceCurrency;
+    private String url;
+    private String customerId;
 
     private String todayLow;
     private String todayHigh;
@@ -206,16 +208,32 @@ public class ScriptDetailBean implements Serializable {
         this.shares = shares;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
+    }
+
     @Override
     public String toString() {
-        return "ScriptDetailBean [name=" + name + ", tickerSymbol=" + tickerSymbol + ", exchange=" + exchange
+        return "ScriptOverviewBean [name=" + name + ", tickerSymbol=" + tickerSymbol + ", exchange=" + exchange
                 + ", exchangeTimezone=" + exchangeTimezone + ", price=" + price + ", priceChange=" + priceChange
                 + ", priceChangePercent=" + priceChangePercent + ", quoteTime=" + quoteTime + ", dataSource="
-                + dataSource + ", priceCurrency=" + priceCurrency + ", todayLow=" + todayLow + ", todayHigh="
-                + todayHigh + ", weekLow=" + weekLow + ", weekHigh=" + weekHigh + ", todayOpen=" + todayOpen
-                + ", volume=" + volume + ", marketCapital=" + marketCapital + ", priceEarningRatio=" + priceEarningRatio
-                + ", latestDividend=" + latestDividend + ", dividendYield=" + dividendYield + ", earningPerShare="
-                + earningPerShare + ", shares=" + shares + "]";
+                + dataSource + ", priceCurrency=" + priceCurrency + ", url=" + url + ", customerId=" + customerId
+                + ", todayLow=" + todayLow + ", todayHigh=" + todayHigh + ", weekLow=" + weekLow + ", weekHigh="
+                + weekHigh + ", todayOpen=" + todayOpen + ", volume=" + volume + ", marketCapital=" + marketCapital
+                + ", priceEarningRatio=" + priceEarningRatio + ", latestDividend=" + latestDividend + ", dividendYield="
+                + dividendYield + ", earningPerShare=" + earningPerShare + ", shares=" + shares + "]";
     }
 
 }
