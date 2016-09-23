@@ -52,7 +52,7 @@ public class HistoricalDataServiceImpl implements HistoricalDataService {
             builder.append(customerId);
             builder.append("&startdate=").append(startDateStr);
             builder.append("&enddate=").append(endDateStr);
-            builder.append("&num=").append(noOfRow);
+            builder.append("&num=").append(noOfRow > 0 ? noOfRow : 20);
             builder.append("&ei=").append(ei);
             String requestUrl = builder.toString();
 
