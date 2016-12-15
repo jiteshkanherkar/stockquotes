@@ -10,7 +10,7 @@ import org.jsoup.nodes.Document;
 
 public final class JSOUPUtil {
 
-    public Document parseHtml(String htmlUrl, Method method, Map<String, String> data) {
+    public static Document parseHtml(String htmlUrl, Method method, Map<String, String> data) {
         Document document = null;
         try {
             Connection connection = Jsoup.connect(htmlUrl);
@@ -28,7 +28,7 @@ public final class JSOUPUtil {
     }
 
     public static void main(String[] args) {
-        new JSOUPUtil().parseHtml("https://www.google.com/finance?q=BOM:532215&ei=Xl_BV4HPOZLQuATWx7_oDQ", Method.GET,
+        parseHtml("https://www.google.com/finance?q=BOM:532215&ei=Xl_BV4HPOZLQuATWx7_oDQ", Method.GET,
                 null);
     }
 

@@ -12,9 +12,9 @@ import org.jitesh.stockquotes.googleservice.util.mapper.DocumentMapper;
 import org.jitesh.stockquotes.livestockquotes.model.HistoricalDataBean;
 import org.jsoup.Connection.Method;
 import org.jsoup.nodes.Document;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class HistoricalDataServiceImpl implements HistoricalDataService {
 
     @Override
@@ -58,7 +58,7 @@ public class HistoricalDataServiceImpl implements HistoricalDataService {
 
             System.out.println("req url >> " + requestUrl);
 
-            document = new JSOUPUtil().parseHtml(requestUrl, Method.GET, null);
+            document = JSOUPUtil.parseHtml(requestUrl, Method.GET, null);
         } catch (Exception e) {
             e.printStackTrace();
         }

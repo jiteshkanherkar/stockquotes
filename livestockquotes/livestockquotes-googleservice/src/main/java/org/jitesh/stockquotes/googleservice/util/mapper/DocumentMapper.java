@@ -130,13 +130,13 @@ public class DocumentMapper {
         HistoricalDataBean historicalDataBean = new HistoricalDataBean();
         try {
             Elements elementsByTagTd = trElement.getElementsByTag("td");
-            Date parseDate = DateUtil.parseDate(elementsByTagTd.get(0).html(), "MMM dd, yyyy");
+            Date parseDate = DateUtil.parseDate(elementsByTagTd.get(0).html().trim(), "MMM dd, yyyy");
             historicalDataBean.setDate(parseDate);
-            historicalDataBean.setOpenPrice(elementsByTagTd.get(1).html());
-            historicalDataBean.setHighPrice(elementsByTagTd.get(2).html());
-            historicalDataBean.setLowPrice(elementsByTagTd.get(3).html());
-            historicalDataBean.setClosePrice(elementsByTagTd.get(4).html());
-            historicalDataBean.setVolume(elementsByTagTd.get(5).html());
+            historicalDataBean.setOpenPrice(elementsByTagTd.get(1).html().trim());
+            historicalDataBean.setHighPrice(elementsByTagTd.get(2).html().trim());
+            historicalDataBean.setLowPrice(elementsByTagTd.get(3).html().trim());
+            historicalDataBean.setClosePrice(elementsByTagTd.get(4).html().trim());
+            historicalDataBean.setVolume(elementsByTagTd.get(5).html().trim());
 
         } catch (Exception e) {
             e.printStackTrace();

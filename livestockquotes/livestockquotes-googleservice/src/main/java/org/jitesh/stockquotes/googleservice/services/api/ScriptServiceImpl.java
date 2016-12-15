@@ -6,9 +6,9 @@ import org.jitesh.stockquotes.googleservice.beans.GoogleScriptList;
 import org.jitesh.stockquotes.googleservice.util.JSONUtil;
 import org.jitesh.stockquotes.googleservice.util.PropertiesReader;
 import org.jitesh.stockquotes.googleservice.util.RestClient;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class ScriptServiceImpl implements ScriptService {
 
     @Override
